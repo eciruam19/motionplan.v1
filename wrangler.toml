@@ -1,0 +1,22 @@
+name = "dffb-motionplan"
+main = "./.next/standalone/server.js"
+compatibility_date = "2023-11-21"
+node_compat = true
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./.next/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dffb_motionplan_db"
+database_id = "dffb-motionplan-db"
+
+[[r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "dffb-motionplan-documents"
+
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://motionplan.pages.dev"
